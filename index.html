@@ -1,9 +1,195 @@
 <!DOCTYPE html>
-<html>
-<head><title>FinBox</title></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinBox — Personal Finance Calculators for Android</title>
+<meta name="description" content="FinBox is a free Android app with SIP, EMI, tax, PPF, EPF, NPS and other personal finance calculators, plus live gold and currency rates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f1f3d;
+    --navy-deep:#0a1730;
+    --gold:#d9a94a;
+    --gold-bright:#f0c874;
+    --ink:#1b2436;
+    --muted:#6b7280;
+    --paper:#faf8f4;
+    --line:#e8e3d8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  header{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color:#fff;
+    padding:64px 20px 56px;
+    text-align:center;
+  }
+  .logo-badge{
+    width:64px;height:64px;border-radius:16px;
+    background:var(--gold);
+    color:var(--navy);
+    font-family:'Fraunces',serif;font-weight:700;font-size:26px;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 20px;
+  }
+  h1{
+    font-family:'Fraunces',serif;font-weight:700;
+    font-size:clamp(28px,5vw,40px);
+    margin:0 0 12px;
+  }
+  header p{
+    color:rgba(255,255,255,0.75);
+    font-size:16px;
+    max-width:480px;
+    margin:0 auto;
+  }
+  .cta-row{
+    margin-top:32px;
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:12px;
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+  }
+  .btn-primary{
+    background:var(--gold);
+    color:var(--navy);
+  }
+  .btn-secondary{
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.25);
+  }
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 20px 40px;
+  }
+  .section-title{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:22px;
+    text-align:center;
+    margin:0 0 28px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px;
+    margin-bottom:56px;
+  }
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px;
+  }
+  .card-name{
+    font-weight:600;
+    font-size:14px;
+    color:var(--ink);
+  }
+  .card-desc{
+    font-size:12.5px;
+    color:var(--muted);
+    margin-top:4px;
+    line-height:1.4;
+  }
+  .note-box{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 22px;
+    font-size:13.5px;
+    color:var(--muted);
+    text-align:center;
+  }
+  footer{
+    text-align:center;
+    padding:32px 20px 48px;
+    font-size:13px;
+    color:var(--muted);
+  }
+  footer a{
+    color:var(--navy);
+    text-decoration:none;
+    font-weight:500;
+  }
+  footer a:hover{ text-decoration:underline; }
+</style>
+</head>
 <body>
-<h1>FinBox</h1>
-<p>FinBox is a personal finance calculator app for Android — SIP, EMI, tax, and more.</p>
-<p><a href="https://github.com/1986bala/finbox-privacy">Privacy Policy</a></p>
+
+<header>
+  <div class="logo-badge">FB</div>
+  <h1>FinBox</h1>
+  <p>All your money calculators in one simple Android app — no sign-up, no data leaving your device.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.finbox.app">Get it on Google Play</a>
+    <a class="btn btn-secondary" href="https://github.com/1986bala/finbox-privacy">Privacy Policy</a>
+  </div>
+</header>
+
+<main>
+  <h2 class="section-title">What's inside</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-name">SIP &amp; Step-up SIP</div>
+      <div class="card-desc">Plan monthly investments and see how they grow.</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Goal SIP &amp; Lumpsum</div>
+      <div class="card-desc">Work backward from a target, or grow a one-time investment.</div>
+    </div>
+    <div class="card">
+      <div class="card-name">FD, RD &amp; PPF</div>
+      <div class="card-desc">Fixed deposits, recurring deposits, and PPF maturity.</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Loan / EMI</div>
+      <div class="card-desc">EMI schedules, prepayment savings, and payoff timelines.</div>
+    </div>
+    <div class="card">
+      <div class="card-name">EPF &amp; NPS</div>
+      <div class="card-desc">Retirement corpus projections for salaried employees.</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Tax &amp; Capital Gains</div>
+      <div class="card-desc">Take-home pay estimator and capital gains tax calculator.</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Compare Options</div>
+      <div class="card-desc">Put investment or loan choices side by side.</div>
+    </div>
+    <div class="card">
+      <div class="card-name">Gold &amp; Currency</div>
+      <div class="card-desc">Live gold, silver, and currency conversion rates.</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    FinBox doesn't require an account and doesn't collect the numbers you enter — all calculations happen on your device. See the <a href="https://github.com/1986bala/finbox-privacy" style="color:var(--navy);font-weight:600;">Privacy Policy</a> for details.
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 FinBox &middot; <a href="https://github.com/1986bala/finbox-privacy">Privacy Policy</a>
+</footer>
+
 </body>
 </html>
